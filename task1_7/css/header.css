@@ -1,0 +1,62 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	min-width: 1280px;
+}
+header{
+	width: 100%;
+	height: 57px;
+	line-height: 57px;
+}
+header img{
+	float: left;
+	padding-left: 59px;
+	padding-top: 13px;
+}
+header h1{
+	font-size: 20px;
+	float: left;
+	padding-left: 10px;	
+	font-family: "黑体";
+}
+header span{
+	float: right;
+	padding-right: 67px;
+}
+header span img{
+	padding-top: 18px;
+	padding-left: 20px;
+	padding-right: 5px;
+}
+header span a{
+	text-decoration: none;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #E34F52;
+}
+header nav{
+	float: right;
+	text-align: center;
+}
+header nav ul li{
+	font-size: 16px;
+	display: inline;
+}
+header nav ul li a{
+	text-decoration: none;	
+	color: #7C7A82;
+	font-family: "微软雅黑";
+	margin-left: 20px;
+	margin-right: 20px;
+	transition: all 0.5s;
+}
+header nav ul li a:hover{
+	color: red;
+}
+.active{
+	border-bottom: 5px solid #E34E52;
+	padding-bottom: 17px;
+}

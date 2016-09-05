@@ -1,0 +1,63 @@
+#section-2{
+	height: 701px;
+	width: 100%;
+}
+.banner{
+	width: 100%;
+	height: 360px;
+	background-color: #EDEDED;
+	padding-top: 89px;
+	text-align: center;
+}
+.banner p{
+	padding-top: 48px;
+	font-size: 52px;
+	font-family: "黑体";
+	color: rgb(143, 141, 142);
+}
+.search_page{
+	position: relative;
+}
+.search_page img{
+	width: 100%;
+	height: 341px;
+}
+.search_words{
+	width: 100%;
+	position: absolute;
+	top: 52px;
+	text-align: center;
+}
+.search_words h3{
+	font-size: 20px;
+	font-family: "微软雅黑";
+	font-weight: normal;
+	color: white;
+}
+.search_words p{
+	font-size: 12px;
+	font-family: "微软雅黑";
+	color: white;
+}
+.search_words form{
+	padding-top: 52px;
+}
+.search_words form select{
+	width: 238px;
+	height: 37px;
+	margin-right: 28px;
+	font-size: 12px;
+	color: #A9A6A6;
+	padding-left: 13px;
+	-webkit-appearance: none;
+	background: url(///D:/ife/task1_7/images/more.png) no-repeat 210px 8px white;
+}
+.search_words input{
+	background-color: #BE4E48;
+	color: white;
+	width: 238px;
+	height: 37px; 
+	border: none;
+	font-size: 14px;
+	font-family: "微软雅黑";
+}

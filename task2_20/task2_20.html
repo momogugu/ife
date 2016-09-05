@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IFE JavaScript Task 20</title>
+	<link rel="stylesheet" type="text/css" href="task2_20.css">
+</head>
+<body>
+	<aside>
+		<form id="create">
+			<fieldset class="input" id="box_type">
+				<legend>类型</legend>
+				<input id="input" type="radio" checked="checked" name="data_type" value="text">
+				<label for="text">输入框</label>
+				<input id="radio" type="radio" name="data_type" value="radio">
+				<label for="radio">单选框</label>
+				<input id="checkbox" type="radio" name="data_type" value="checkbox">
+				<label for="checkbox">多选框</label>
+				<input id="select" type="radio" name="data_type" value="select">
+				<label for="select">下拉框</label>
+				<input id="textarea" type="radio" name="data_type" value="textarea">
+				<label for="textarea">文本域</label>
+			</fieldset>
+			<fieldset id="box_basic" class="necessary">
+				<legend>配置</legend>
+				<label>名称：</label>
+				<input id="box_label" type="text" value="姓名">
+				<input id="necessary" checked="checked" type="radio" name="data_need">
+				<label for="necessary">必填</label>
+				<input id="unnecessary" type="radio" name="data_need">
+				<label for="unnecessary">选填</label>
+				<label>样式:</label>
+				<select id="select_box">
+					<option>样式一</option>
+					<option>样式二</option>
+				</select>
+			</fieldset>
+			<fieldset id="rule_input" class="text">
+				<legend>规则</legend>
+				<input id="text" checked="checked" type="radio" name="data_rule">
+				<label for="text">文字</label>
+				<input id="number" type="radio" name="data_rule">
+				<label for="number">数字</label>
+				<input id="email" type="radio" name="data_rule">
+				<label for="email">邮箱</label>
+				<input id="phone" type="radio" name="data_rule">
+				<label for="phone">电话号码</label>
+				<input id="password" type="radio" name="data_rule">
+				<label for="password">密码</label>
+			</fieldset>
+			<fieldset id="length_control">
+				<legend>长度限制</legend>
+				<label>字符范围：</label>
+				<input id="min_length" type="number" min="0" value="4">
+				<span>--</span>
+				<input id="max_length" type="number" min="1" value="16">
+			</fieldset>
+			<fieldset id="box_item">
+				<legend>选项</legend>
+				<input type="text" id="box_item_input" placeholder="可用空格，逗号，回车来分隔选项">
+				<div id="box_item_container"></div>
+			</fieldset>
+			<input id="add_btn" type="button" value="add">
+		</form>
+	</aside>
+	<div id="form_box">
+		<h1>表单展示区</h1>
+		<form id="result">
+			<buttom id="submit">提交</buttom>
+		</form>
+	</div>
+	<script type="text/javascript" src="dataProductModule.js"></script>
+	<script type="text/javascript" src="formModule.js"></script>
+	<script type="text/javascript" src="task2_20.js"></script>
+	<script type="text/javascript" src="showTagModule.js"></script>
+</body>
+</html>

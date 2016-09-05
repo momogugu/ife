@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IFE JavaScript Task 12</title>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		form{
+			margin: 20px;
+		}
+		input{
+			width: 18%;
+			height: 30px;
+			margin-bottom: 10px;
+		}
+		div {
+			float: left;
+			padding: 20px;
+			margin: 10px;
+			border: 1px solid #000;
+			background-color: #fff;
+			color: #000;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<input type="button" value="深度优先遍历">
+		<input type="button" value="广度优先遍历">
+		<input type="text" id="search_input" placeholder="请输入搜索内容">
+		<input type="button" value="深度优先搜索">
+		<input type="button" value="广度优先搜索">
+		<input type="button" value="删除选中节点及其所有子节点">
+		<input type="text" id="node_input" placeholder="请输入要增加的子节点">
+		<input type="button" value="在选中节点下增加子节点">
+	</form>
+	<section>
+		<div id="root">
+			Super
+			<div>
+				Cat
+				<div>
+					Apple
+					<div>Pear</div>
+					<div>Pig</div>
+					<div>Cola</div>
+					<div>Soccer</div>
+				</div>
+				<div>Phone</div>
+				<div>
+					<div>Book</div>
+					<div>School</div>
+				</div>
+			</div>
+			<div>
+				Note
+				<div>
+					Human
+					<div>Code</div>
+					<div>Operate</div>
+					<div>Man</div>
+				</div>
+				<div>
+					Program
+					<div>
+						Bement
+						<div>Cat</div>
+					</div>
+					<div>Glass</div>
+				</div>
+			</div>
+			<div>Fish</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="task2_12.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IFE JavaScript Task 19</title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		form {
+			width: 60%;
+			height: 150px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -75px;
+			margin-left: -30%;
+		}
+		fieldset {
+			border: none;
+			text-align: center;
+			margin: 20px;
+		}
+		select {
+			width: 100px;
+			height: 30px;
+			font-size: 14px;
+		}
+		#college {
+			display: none;
+		}
+		#company {
+			display: none;
+		}
+		#company input {
+			width: 200px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<form action="" method="post">
+		<fieldset id="student">
+			<input id="undergraduate" type="radio" name="people" value="在校生"><label for="undergraduate">在校生</label>
+			<input id="graduate" type="radio" name="people" value="非在校生"><label for="graduate">非在校生</label>
+		</fieldset>
+		<fieldset id="college">
+			<label for="city">城市:</label>
+			<select id="city">
+				<option>北京</option>
+				<option>上海</option>
+				<option>武汉</option>
+				<option>厦门</option>
+			</select>
+			<label for="school">学校:</label>
+			<select id="school">
+				<option>北京大学</option>
+				<option>清华大学</option>
+				<option>中国人民大学</option>
+			</select>
+		</fieldset>
+		<fieldset id="company">
+			<label for="company">就业单位:</label>
+			<input type="text" placeholder="请填写公司名称" name="">
+		</fieldset>
+	</form>
+	<script type="text/javascript" src="task2_19.js"></script>
+</body>
+</html>

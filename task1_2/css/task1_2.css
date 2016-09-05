@@ -1,0 +1,146 @@
+*{
+	margin: 0;padding: 0;
+}
+body{
+	background: silver;
+	font-family: "宋体"；
+}
+header{
+	background: black;
+	height: 60px;
+}
+header img{
+	width: 150px;
+	height: 60px;
+	padding-left: 15px;
+}
+nav{
+	float: right;
+	width: 20%;
+}
+nav ul li{
+	display: inline;
+	padding: 5px;
+	line-height: 60px;
+}
+nav ul li a{
+	color: white;
+	text-decoration: none;
+}
+nav ul li a:hover{
+	color: silver;
+}
+/*主体部分*/
+article, aside{
+	display: block;
+	background: white;
+	margin: 20px;
+	padding: 15px;
+	box-shadow: 1px 1px 2px 1px #848484;
+}
+article h2{
+	padding: 5px 0;
+}
+article h3{
+	padding: 10px 0;
+	color: #888888;
+	font-size: 16px;
+}
+article span{
+	padding: 10px 0;
+	color: #808080;
+	font-size: 12px;
+}
+article p{
+	padding: 10px 0;
+	text-indent: 2em;
+	line-height: 20px;
+}
+article a{
+	color: blue;
+}
+article a:hover {
+	color: red;
+}
+article img{
+	padding: 10px 0;
+}
+article ul{
+	list-style-type: none;
+}
+.img_wrap{
+	border: 1px solid #ccc;
+	margin: 15px;
+	width: 150px;
+}
+.img_wrap img{
+	width: 130px;
+	padding: 10px;
+}
+.img_wrap p{
+	text-align: center;
+	text-indent: 0;
+}
+article ol{
+	margin: 10px 40px;
+}
+article table{
+	width: 100%;
+	border-collapse: collapse;
+}
+article table tr th{
+	background-color: black;
+	color: white;
+	border: 1px solid #ccc;
+}
+article table tr td{
+	border: 1px solid #ccc;
+}
+.summary{
+	background-color: #ccc;
+}
+/*侧栏*/
+aside h3{
+	border-left: 2px silver solid;
+	padding-left: 10px;
+	line-height: 40px;
+}
+aside p{
+	color: #808080;
+	margin-left: 35%;
+	padding-left: 15px;
+}
+aside div{
+	margin: 10px;
+	font-size: 14px;
+}
+.tips{
+	float: left;
+	text-align: right;
+	width: 35%;
+	padding-right: 15px;
+}
+aside textarea{
+	width: 50%;
+}
+.submit{
+	width: 100%;
+	height: 40px;
+	background-color: #128fdc;
+	color: white;
+	border-radius: 15px;
+	border: none;
+}
+.submit:hover{
+	background-color: blue;
+}
+/*底部*/
+footer{
+	width: 100%；
+	height: 60px;
+	background: black;
+	color: white;
+	text-align: center;
+	line-height: 60px;
+	font-size: 16px;
+}

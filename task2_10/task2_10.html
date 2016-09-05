@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IFE JavaScript Task 10</title>
+	<style type="text/css">
+		body{
+			min-width: 1280px;
+			width: 100%;
+			margin: 0px;
+		}
+		#btn{
+			width: 80%;
+			margin: 20px auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#btn input{
+			width: 15%;
+			height: 40px;
+			margin-left: 15px;
+		}
+		#root{
+			width: 80%;
+			height: 400px;
+			margin: 50px auto;
+			border: 1px solid black;
+			display: flex;
+			justify-content: space-around;			
+			align-items: center;
+		}
+		.child_1{
+			width: 45%;
+			height: 350px;
+			border: 1px solid red;
+			display: flex;
+			justify-content: space-around;			
+			align-items: center;
+		}
+		.child_2{
+			width: 40%;
+			height: 300px;
+			border: 1px solid blue;
+			display: flex;
+			justify-content: space-around;			
+			align-items: center;
+		}
+		.child_3{
+			width: 35%;
+			height: 250px;
+			border: 1px solid #CD0EF9;
+		}
+	</style>
+</head>
+<body>
+	<form id="btn">
+		<input type="button" value="前序">
+		<input type="button" value="中序">
+		<input type="button" value="后序">
+	</form>
+	<div id="root">
+		<div class="child_1">
+			<div class="child_2">
+				<div class="child_3"></div>
+				<div class="child_3"></div>
+			</div>
+			<div class="child_2">
+				<div class="child_3"></div>
+				<div class="child_3"></div>
+			</div>
+		</div>
+		<div class="child_1">
+			<div class="child_2">
+				<div class="child_3"></div>
+				<div class="child_3"></div>
+			</div>
+			<div class="child_2">
+				<div class="child_3"></div>
+				<div class="child_3"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="task2_10.js"></script>
+</body>
+</html>

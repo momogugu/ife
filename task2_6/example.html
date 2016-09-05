@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task18</title>
+    <style>
+    #container div {
+        display: inline-block;
+        font-size: 30px;
+        text-align: center;
+        padding: 0 15px;
+        margin: 5px 10px;
+        height: 50px;
+        line-height: 50px;
+        background-color: lightgreen;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="text">
+    <input type="button" value="left in">
+    <input type="button" value="right in" style="margin-right : 20px;">
+    <input type="button" value="left out">
+    <input type="button" value="right out">
+    <p>attention: <span id="lookMe">your operating will show here.</span></p>
+    <div id="container">
+    </div>
+    <script>
+    //通用函数
+    //事件绑定函数，兼容浏览器差异
+    function addEvent(ele, event, listener) {
+        if (ele.addEventListener) {
+            ele.addEventListener(event, listener, false);
+        } else if (ele.attachEvent) {
+            ele.attachEvent("on" + event, listener);
+        } else {
+            ele["on" + event] = listener;
+        }
+    }
+
+
+
+    //遍历数组方法，对该数组本身进行操作
+    function each(arr, fn) {
+        for (var i = 0, len = arr.length; i < len; i++) {
+            fn(arr[i], i);
+        }
+    }
+    </script>
+    <script>
+    window.onload = function() {
+        var container = document.getElementById('container');
+        var buttonList = document.getElementsByTagName('input');
+        var lookMe = document.getElementById('lookMe');
+        //定义队列对象
+        var queue = {
+                str: [],
+
+                leftPush: function(num) {
+                    this.str.unshift(num);
+                    this.paint();
+                    lookMe.innerHTML = "left push " + num;
+                },
+
+                rightPush: function(num) {
+                    this.str.push(num);
+                    this.paint();
+                    lookMe.innerHTML = "right push " + num;
+                },
+
+                isEmpty: function() {
+                    return (this.str.length == 0);
+                },
+
+                leftPop: function() {
+                    if (!this.isEmpty()) {
+                        // alert(this.str.shift());
+                        lookMe.innerHTML = "left pop " + this.str.shift();
+                        this.paint();
+                    } else {
+                        // alert("The queue is already empty!");
+                        lookMe.innerHTML = "The queue is already empty!";
+                    }
+                },
+
+                rightPop: function() {
+                    if (!this.isEmpty()) {
+                        // alert(this.str.pop());
+                        lookMe.innerHTML = "right pop " + this.str.pop();
+                        this.paint();
+                    } else {
+                        // alert("The queue is already empty!");
+                        lookMe.innerHTML = "The queue is already empty!";
+                    }
+                },
+
+                paint: function() {
+                    var str = "";
+                    each(this.str, function(item) {
+                        str += ("<div>" + parseInt(item) + "</div>")
+                    });
+                    container.innerHTML = str;
+                    addDivDelEvent();
+                },
+
+                deleteID: function(id) {
+                    console.log(id);
+                    this.str.splice(id, 1);
+                    this.paint();
+                }
+
+            }
+            //为container中的每个div绑定删除函数
+        function addDivDelEvent() {
+            for (var cur = 0; cur < container.childNodes.length; cur++) {
+                //这里要使用闭包，否则永远绑定到指定div上的delete函数的参数永远等于跳出时的cur值(length);
+                addEvent(container.childNodes[cur], "click", function(cur) {
+                    return function() {
+                        return queue.deleteID(cur)
+                    };
+                }(cur));
+            }
+        }
+
+        //为4个按钮绑定函数
+        addEvent(buttonList[1], "click", function() {
+            var input = buttonList[0].value;
+            if ((/^[0-9]+$/).test(input)) {
+                queue.leftPush(input);
+            } else {
+                // alert("Please enter an interger!");
+                lookMe.innerHTML = "Please enter an interger!";
+            }
+        });
+        addEvent(buttonList[2], "click", function() {
+            var input = buttonList[0].value;
+            if ((/^[0-9]+$/).test(input)) {
+                queue.rightPush(input);
+            } else {
+                // alert("Please enter an interger!");
+                lookMe.innerHTML = "Please enter an interger!";
+            }
+        });
+        addEvent(buttonList[3], "click", function() {
+            queue.leftPop()
+        });
+        addEvent(buttonList[4], "click", function() {
+            queue.rightPop()
+        });
+
+    }
+    </script>
+</body>
+
+</html>

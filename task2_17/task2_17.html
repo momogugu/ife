@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>IFE JavaScript Task 17</title>
+</head>
+<style type="text/css">
+	*{
+	    margin: 0;
+	    padding: 0;
+	    font-family: '微软雅黑';
+	    font-size: 1rem;
+	}
+	form {
+		width: 500px;
+		height: 100px;
+		margin: 80px auto;
+	}
+
+	#input {
+		width: 200px;
+		height: 30px;
+		border-radius: 5px;
+		border-color: #D1D4D5;
+    	border-style: solid;
+    	margin-left: 10px;
+    	margin-right: 10px;
+	}
+	#input:focus, #btn:focus {
+		outline: none;
+	}
+	#btn {
+		width: 60px;
+		height: 34px;
+		border-radius: 5px;
+		background-color: blue;
+		color: white;
+		border: none;
+	}
+	p {
+		padding-left: 50px;
+		color: #D1D4D5;
+	}
+</style>
+<body>
+	<form>
+		<label>名称</label>
+		<input type="text" id="input">
+		<input type="button" value="验证" id="btn">
+		<p>必填，长度为4~16个字符</p>
+	</form>
+	<script type="text/javascript">
+		var input = document.getElementById('input');
+		var inform = document.getElementsByTagName('p')[0];
+		var btn = document.getElementById('btn');
+		btn.onclick = validate;
+		function validate() {
+			if (countLength(input.value) == 0) {
+				inform.innerHTML = "姓名不能为空";
+				inform.style.color = 'red';
+				input.style.border = '1px solid red';
+			} else if (countLength(input.value)>=4 && countLength(input.value)<=16) {
+				inform.innerHTML = "名称格式正确";
+				inform.style.color = 'lightgreen';
+				input.style.border = '1px solid lightgreen';
+			} else {
+				inform.innerHTML = "请输入长度为4~16位字符";
+				inform.style.color = 'red';
+				input.style.border = '1px solid red';
+			}
+		}
+		function countLength(str) {
+			var inputLength = 0;
+			for (var i = 0; i < str.length; i++) {
+				if(str.charCodeAt(i)>=0 && str.charCodeAt(i)<=128) {
+					inputLength +=1;//英文字母、数字、英文符号长度为1
+				} else {
+					inputLength +=2;//汉子，中午符号长度为2
+				}
+			}
+			return inputLength;
+		}
+	</script>
+</body>
+</html>
